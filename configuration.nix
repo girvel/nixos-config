@@ -89,7 +89,7 @@
   users.users.girvel = {
     isNormalUser = true;
     description = "girvel";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "vboxsf" ];
     packages = with pkgs; [
     #  thunderbird
     ];

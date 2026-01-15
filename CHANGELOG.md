@@ -1,0 +1,3 @@
+- [ ] Attach dotfiles
+- [ ] Enforce conventional file structure
+- [ ] Hyprland
