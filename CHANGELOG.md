@@ -3,6 +3,7 @@
 - [x] Enforce conventional file structure
 - [x] Join clipboard of VM with the host
 - [x] Fix ghostty on VM
+
 - [ ] Hyprland
 - [ ] Use zsh + omz + my theme/aliases?
 - [ ] nvim: Fix treesitter

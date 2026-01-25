@@ -90,6 +90,10 @@
     curl
     btop
     ripgrep
+    unzip
+    gcc
+    tree-sitter
+    nodejs_22
   ];
 
   system.stateVersion = "25.11";
