@@ -1,3 +1,5 @@
-- [ ] Attach dotfiles
+- [x] Attach dotfiles
+- [ ] Add ghostty
 - [ ] Enforce conventional file structure
+- [ ] Join clipboard of VM with the host
 - [ ] Hyprland

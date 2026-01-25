@@ -6,6 +6,8 @@
   home.packages = with pkgs; [
     stow
     nodejs_22
+    gh
+    ghostty
   ];
 
   home.activation.stowDotfiles = lib.hm.dag.entryAfter ["writeBoundary"] ''
