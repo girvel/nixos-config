@@ -11,6 +11,7 @@
     nixosConfigurations = {
       vm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs self; };
         modules = [
           ./hosts/vm/default.nix
 

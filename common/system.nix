@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, self, lib, ... }:
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -98,4 +98,15 @@
     enable = true;
     extraPackages = with pkgs; [mesa.drivers];
   };
+
+  system.configurationRevision = 
+    if (self ? rev)
+    then self.rev
+    else "dirty-build";
+
+  system.nixos.label = let
+    rev = if (self ? rev)
+      then (builtins.substsring 0 7 self.rev)
+      else "dirty-build";
+  in "${config.system.nixos.release}-${rev}";
 }
