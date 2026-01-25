@@ -1,5 +1,7 @@
 - [x] Attach dotfiles
-- [ ] Add ghostty
-- [ ] Enforce conventional file structure
-- [ ] Join clipboard of VM with the host
+- [x] Add ghostty
+- [x] Enforce conventional file structure
+- [x] Join clipboard of VM with the host
+- [ ] Fix ghostty on VM
 - [ ] Hyprland
+- [ ] Use zsh + omz + my theme/aliases?

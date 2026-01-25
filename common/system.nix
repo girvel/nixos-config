@@ -5,16 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
-
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
-
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -51,10 +41,6 @@
       layout = "us,ru";
       options = "grp:ctrl_space_toggle";
     };
-  };
-
-  virtualisation.virtualbox.guest = {
-    enable = true;
   };
 
   # Enable CUPS to print documents.
