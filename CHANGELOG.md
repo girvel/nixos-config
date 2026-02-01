@@ -5,10 +5,11 @@
 - [x] Fix ghostty on VM
 - [x] nvim: Fix treesitter
 - [ ] Use zsh + omz + my theme/aliases?
-- [ ] nvim: Enable/disable theme
 - [ ] Screenshot utility
 - [ ] Firefox configuration
 - [ ] Machine-dependent rebuild & mix commands
 - [ ] Fix warnings
 
 - [ ] Hyprland
+
+- [ ] nvim: Enable/disable theme

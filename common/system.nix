@@ -70,20 +70,23 @@
     isNormalUser = true;
     description = "girvel";
     extraGroups = [ "networkmanager" "wheel" "vboxsf" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     #  thunderbird
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      stdenv.cc.cc.lib
-      zlib
-      openssl
-    ];
+  programs = {
+    firefox.enable = true;
+    zsh.enable = true;
+    nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        stdenv.cc.cc.lib
+        zlib
+        openssl
+      ];
+    };
   };
 
   # Allow unfree packages

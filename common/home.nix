@@ -10,6 +10,27 @@
     fd
   ];
 
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ "git" "sudo" ];
+    };
+
+    initExtra = ''
+      source ~/.aliases
+      source ~/.oh-my-zsh/themes/arch.zsh-theme
+    '';
+
+    sessionVariables = {
+      EDITOR = "nvim";
+      WORKSHOP = "$HOME/workshop";
+    };
+  };
+
   home.activation.stowDotfiles = lib.hm.dag.entryAfter ["writeBoundary"] ''
     DOTFILES_DIR="${config.home.homeDirectory}/workshop/nixos-config/dotfiles"
     if [ -d "$DOTFILES_DIR" ]; then
