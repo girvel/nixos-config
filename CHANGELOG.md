@@ -3,10 +3,12 @@
 - [x] Enforce conventional file structure
 - [x] Join clipboard of VM with the host
 - [x] Fix ghostty on VM
-
-- [ ] Hyprland
+- [x] nvim: Fix treesitter
 - [ ] Use zsh + omz + my theme/aliases?
-- [ ] nvim: Fix treesitter
 - [ ] nvim: Enable/disable theme
 - [ ] Screenshot utility
 - [ ] Firefox configuration
+- [ ] Machine-dependent rebuild & mix commands
+- [ ] Fix warnings
+
+- [ ] Hyprland

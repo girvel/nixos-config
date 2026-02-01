@@ -77,6 +77,14 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+      zlib
+      openssl
+    ];
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

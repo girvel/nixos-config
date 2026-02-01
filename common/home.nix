@@ -7,6 +7,7 @@
     stow
     nodejs_22
     ghostty
+    fd
   ];
 
   home.activation.stowDotfiles = lib.hm.dag.entryAfter ["writeBoundary"] ''
