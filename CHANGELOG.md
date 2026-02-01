@@ -4,7 +4,7 @@
 - [x] Join clipboard of VM with the host
 - [x] Fix ghostty on VM
 - [x] nvim: Fix treesitter
-- [ ] Use zsh + omz + my theme/aliases?
+- [x] Use zsh + omz + my theme/aliases?
 - [ ] Screenshot utility
 - [ ] Firefox configuration
 - [ ] Machine-dependent rebuild & mix commands

@@ -31,6 +31,15 @@
     };
   };
 
+  programs.firefox = {
+    enable = true;
+    profiles.girvel = {
+      id = 0;
+      name = "girvel";
+      isDefault = true;
+    };
+  };
+
   home.activation.stowDotfiles = lib.hm.dag.entryAfter ["writeBoundary"] ''
     DOTFILES_DIR="${config.home.homeDirectory}/workshop/nixos-config/dotfiles"
     if [ -d "$DOTFILES_DIR" ]; then
