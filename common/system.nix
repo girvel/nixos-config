@@ -32,16 +32,14 @@
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
-    displayManager.gdm = {
-      enable = true;
-      # wayland = false;
-    };
-    desktopManager.gnome.enable = true;
     xkb = {
       layout = "us,ru";
       options = "grp:ctrl_space_toggle";
     };
   };
+
+  services.displayManager.gdm.enable = true;
+  services.desktopManager.gnome.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -110,7 +108,7 @@
 
   hardware.graphics = {
     enable = true;
-    extraPackages = with pkgs; [mesa.drivers];
+    extraPackages = with pkgs; [ mesa ];
   };
 
   system.configurationRevision = 

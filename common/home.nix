@@ -20,7 +20,7 @@
       plugins = [ "git" "sudo" ];
     };
 
-    initExtra = ''
+    initContent = ''
       source ~/.aliases
       source ~/.oh-my-zsh/themes/arch.zsh-theme
     '';
