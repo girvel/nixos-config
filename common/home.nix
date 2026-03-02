@@ -8,6 +8,7 @@
     nodejs_22
     ghostty
     fd
+    eza
   ];
 
   programs.zsh = {
