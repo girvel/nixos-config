@@ -102,6 +102,7 @@
     gcc
     tree-sitter
     nodejs_22
+    desktop-file-utils
   ];
 
   system.stateVersion = "25.11";
@@ -110,15 +111,4 @@
     enable = true;
     extraPackages = with pkgs; [ mesa ];
   };
-
-  system.configurationRevision = 
-    if (self ? rev)
-    then self.rev
-    else "dirty-build";
-
-  system.nixos.label = let
-    rev = if (self ? rev)
-      then (builtins.substsring 0 7 self.rev)
-      else "dirty-build";
-  in "${config.system.nixos.release}-${rev}";
 }
