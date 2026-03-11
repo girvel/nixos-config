@@ -51,10 +51,11 @@
     fi
   '';
 
-  home.activation.refreshDesktop = lib.hm.dag.entryAfter ["writeBoundary"] ''
-    echo "Linking Nix apps to ~/.local/share/applications..."
-    mkdir -p ~/.local/share/applications
-    ln -sf /etc/profiles/per-user/girvel/share/applications/*.desktop ~/.local/share/applications/
-    update-desktop-database ~/.local/share/applications
-  '';
+  # xdg.mime.defaultApplications = {
+  #   "text/html" = "firefox.desktop";
+  #   "x-scheme-handler/http" = "firefox.desktop";
+  #   "x-scheme-handler/https" = "firefox.desktop";
+  #   "x-scheme-handler/about" = "firefox.desktop";
+  #   "x-scheme-handler/unknown" = "firefox.desktop";
+  # };
 }

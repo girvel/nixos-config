@@ -88,21 +88,27 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    vim
-    neovim
-    git
-    gh
-    wget
-    curl
-    btop
-    ripgrep
-    unzip
-    gcc
-    tree-sitter
-    nodejs_22
-    desktop-file-utils
-  ];
+  environment = {
+    gnome.excludePackages = [
+      pkgs.epiphany
+    ];
+
+    systemPackages = with pkgs; [
+      vim
+      neovim
+      git
+      gh
+      wget
+      curl
+      btop
+      ripgrep
+      unzip
+      gcc
+      tree-sitter
+      nodejs_22
+      desktop-file-utils
+    ];
+  };
 
   system.stateVersion = "25.11";
 
