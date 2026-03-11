@@ -5,10 +5,13 @@ Making the laptop habitable
 - [x] Remove the terrible shitty default browser
 - [x] Fix dotfiles
 - [x] Test firefox
-- [ ] Change caps lock on the keyboard
+- [x] Change caps lock on the keyboard
 - [ ] Fix ghostty
 - [ ] Ctrl+shift+T
 - [ ] Quick language switch
+- [ ] Firefox as default browser
+- [ ] Laptop: touchpad has no RMB
+- [ ] Laptop: issues with sleep/keyboard/touchpad
 
 # VirtualBox development
 
@@ -45,3 +48,4 @@ A little bit more experimental or questionnable or less important tasks for late
 
 - [ ] Hyprland
 - [ ] nvim: Enable/disable theme
+- [ ] Live USB

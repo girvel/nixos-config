@@ -9,6 +9,7 @@
     ghostty
     fd
     eza
+    jq
   ];
 
   programs.zsh = {
@@ -40,6 +41,8 @@
       isDefault = true;
     };
   };
+
+  programs.chromium.enable = true;
 
   home.activation.stowDotfiles = lib.hm.dag.entryAfter ["writeBoundary"] ''
     DOTFILES_DIR="${config.home.homeDirectory}/workshop/nixos-config/dotfiles"
